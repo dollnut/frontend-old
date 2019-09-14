@@ -16,8 +16,16 @@ import {
   red,
   lightGreen,
   lime,
-  amber
+  amber,
+  blue,
+  indigo,
+  deepOrange,
+  yellow,
+  purple,
+  deepPurple,
+  lightBlue
 } from '@material-ui/core/colors';
+import { light } from '@material-ui/core/styles/createPalette';
 
 const theme = createMuiTheme({
   palette: {

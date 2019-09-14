@@ -22,16 +22,15 @@ import {
   GridListTile,
   GridListTileBar
 } from '@material-ui/core';
-import StreamIcon from '@material-ui/icons/PlayCircleFilled';
+import PlayIcon from '@material-ui/icons/PlayArrow';
 import NavBar from './component/NavBar';
 import SocialCard from './component/SocialCard';
 import SocialCardList from './component/SocialCardList';
 const useStyles = makeStyles(theme => {
-  console.log(theme.palette.primary.dark);
   return {
     bg: {
-      background: theme.palette.primary.dark,
-      color: theme.palette.primary.contrastText
+      // background: theme.palette.primary.dark
+      // color: theme.palette.primary.contrastText
     },
     highlight: {
       color: theme.palette.secondary.light
@@ -60,7 +59,7 @@ function App() {
           alignItems='center'
         >
           <Grid item xs={4}>
-            <Typography variant='h2' component='h1' color='inherit'>
+            <Typography variant='h2' component='h1' color='primary'>
               DOLL<span className={classes.highlight}>NUT</span>
             </Typography>
             <Typography variant='subtitle1' component='h2'>
