@@ -10,7 +10,6 @@ import {
   cyan,
   pink,
   green,
-  black,
   grey,
   orange,
   red,
@@ -23,13 +22,14 @@ import {
   yellow,
   purple,
   deepPurple,
-  lightBlue
+  lightBlue,
+  teal
 } from '@material-ui/core/colors';
 import { light } from '@material-ui/core/styles/createPalette';
 
 const theme = createMuiTheme({
   palette: {
-    primary: brown,
+    primary: blue,
     secondary: pink
   }
 });

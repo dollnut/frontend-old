@@ -20,17 +20,21 @@ import {
   Avatar,
   GridList,
   GridListTile,
-  GridListTileBar
+  GridListTileBar,
+  Icon
 } from '@material-ui/core';
 import PlayIcon from '@material-ui/icons/PlayArrow';
 import NavBar from './component/NavBar';
 import SocialCard from './component/SocialCard';
 import SocialCardList from './component/SocialCardList';
+import CTAContainer from './component/CTAContainer';
+import YouTubeContainer from './component/YouTubeContainer';
 const useStyles = makeStyles(theme => {
   return {
     bg: {
-      // background: theme.palette.primary.dark
-      // color: theme.palette.primary.contrastText
+      background: theme.palette.primary.dark,
+      color: theme.palette.primary.contrastText,
+      padding: '50px 0'
     },
     highlight: {
       color: theme.palette.secondary.light
@@ -39,7 +43,25 @@ const useStyles = makeStyles(theme => {
       marginTop: '50px'
     },
     youtube: {
-      margin: '50px 0'
+      margin: '0 0 15px'
+    },
+    gutterBottom: {
+      padding: '0 0 50px'
+    },
+    ctaContainer: {
+      padding: '75px 0 75px'
+    },
+    divider: {
+      background: theme.palette.secondary.light,
+      padding: '15px',
+      border: 'none'
+    },
+    footer: {
+      background: theme.palette.primary.main,
+      padding: '75px 0 50px'
+    },
+    title: {
+      flewGrow: 1
     }
   };
 });
@@ -47,159 +69,29 @@ const useStyles = makeStyles(theme => {
 function App() {
   const classes = useStyles();
   return (
-    <div className={classes.bg}>
+    <>
       <NavBar />
-      <Container>
-        <Grid
-          container
-          spacing={3}
-          className={classes.card}
-          justify='space-around'
-          align='center'
-          alignItems='center'
-        >
-          <Grid item xs={4}>
-            <Typography variant='h2' component='h1' color='primary'>
-              DOLL<span className={classes.highlight}>NUT</span>
-            </Typography>
-            <Typography variant='subtitle1' component='h2'>
-              Twitch Analysis on the Best Anime & Manga
-            </Typography>
-
-            <Typography variant='subtitle1' gutterBottom component='h4'>
-              Everyday 6AM-10AM
-            </Typography>
-            <br />
-            <Button
-              color='secondary'
-              variant='contained'
-              size='large'
-              width='100%'
-              disabled
-              fullWidth
-            >
-              Live Soon
-            </Button>
-          </Grid>
-          <Grid item xs={4}>
-            <Card>
-              <CardActionArea>
-                <CardMedia
-                  component='img'
-                  alt='DollNut YouTube Title'
-                  height='252px'
-                  width='448px'
-                  title='YouTube Title'
-                  image='https://pbs.twimg.com/profile_images/1165870474393337856/K9OpySa3_200x200.jpg'
-                />
-              </CardActionArea>
-              <CardContent>
-                <Typography gutterBottom variant='h5' component='h2'>
-                  YouTube Title
-                </Typography>
-                <Button variant='contained' color='secondary' fullWidth>
-                  Watch Now
-                </Button>
-                <Button color='secondary' fullWidth>
-                  Share
-                </Button>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-
-        {/* YouTube List */}
-        <Grid
-          container
-          spacing={3}
-          justify='space-between'
-          className={classes.youtube}
-        >
-          <Grid xs={2} align='center'>
-            <Card>
-              <CardActionArea>
-                <CardMedia
-                  component='img'
-                  alt='DollNut YouTube Title'
-                  title='YouTube Title'
-                  image='https://pbs.twimg.com/profile_images/1165870474393337856/K9OpySa3_200x200.jpg'
-                  height='140px'
-                />
-              </CardActionArea>
-              <CardContent>
-                <Typography variant='subtitle2'>Date</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid xs={2} align='center'>
-            <Card>
-              <CardActionArea>
-                <CardMedia
-                  component='img'
-                  alt='DollNut YouTube Title'
-                  title='YouTube Title'
-                  image='https://pbs.twimg.com/profile_images/1165870474393337856/K9OpySa3_200x200.jpg'
-                  height='140px'
-                />
-              </CardActionArea>
-              <CardContent>
-                <Typography variant='subtitle2'>Date</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid xs={2} align='center'>
-            <Card>
-              <CardActionArea>
-                <CardMedia
-                  component='img'
-                  alt='DollNut YouTube Title'
-                  title='YouTube Title'
-                  image='https://pbs.twimg.com/profile_images/1165870474393337856/K9OpySa3_200x200.jpg'
-                  height='140px'
-                />
-              </CardActionArea>
-              <CardContent>
-                <Typography variant='subtitle2'>Date</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid xs={2} align='center'>
-            <Card>
-              <CardActionArea>
-                <CardMedia
-                  component='img'
-                  alt='DollNut YouTube Title'
-                  title='YouTube Title'
-                  image='https://pbs.twimg.com/profile_images/1165870474393337856/K9OpySa3_200x200.jpg'
-                  height='140px'
-                />
-              </CardActionArea>
-              <CardContent>
-                <Typography variant='subtitle2'>Date</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          <Grid xs={2} align='center'>
-            <Card>
-              <CardActionArea>
-                <CardMedia
-                  component='img'
-                  alt='DollNut YouTube Title'
-                  title='YouTube Title'
-                  image='https://pbs.twimg.com/profile_images/1165870474393337856/K9OpySa3_200x200.jpg'
-                  height='140px'
-                />
-              </CardActionArea>
-              <CardContent>
-                <Typography variant='subtitle2'>Date</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-        <SocialCardList />
+      <Container className={classes.ctaContainer}>
+        <CTAContainer />
       </Container>
-    </div>
+
+      <div className={classes.bg}>
+        <Container className={classes.gutterBottom}>
+          <SocialCardList />
+        </Container>
+        <Container className={classes.gutterBottom}>
+          <YouTubeContainer />
+        </Container>
+      </div>
+      <footer className={classes.footer}>
+        <Container>
+          <Typography variant='h4' className={classes.title}>
+            DollNut - 2019
+          </Typography>
+          <Icon className='fab fa-youtube' />
+        </Container>
+      </footer>
+    </>
   );
 }
 

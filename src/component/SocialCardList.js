@@ -4,7 +4,7 @@ import SocialCard from './SocialCard';
 
 const SocialCardList = () => {
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={3} justify='space-between'>
       <Grid item xs={12} md={6}>
         <SocialCard website='Twitter' />
       </Grid>

@@ -10,6 +10,9 @@ const useStyles = makeStyles(theme => {
     },
     icon: {
       marginRight: '3px'
+    },
+    root: {
+      // marginBottom: '100px'
     }
   };
 });
@@ -17,8 +20,8 @@ const useStyles = makeStyles(theme => {
 const NavBar = () => {
   const classes = useStyles();
   return (
-    <AppBar position='static'>
-      <Toolbar component='nav'>
+    <AppBar position='static' className={classes.root}>
+      <Toolbar component='nav' variant='dense'>
         <ul className={classes.title}>
           <Button color='inherit' component='li'>
             YouTube

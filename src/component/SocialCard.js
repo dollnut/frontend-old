@@ -5,15 +5,31 @@ import {
   List,
   ListItem,
   ListItemText,
-  Divider
+  Divider,
+  Button
 } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles(theme => ({
+  button: {
+    margin: '0 0 -15px -5px',
+    zIndex: '2000'
+  }
+}));
 
 const SocialCard = ({ website }) => {
+  const classes = useStyles();
   return (
     <div>
-      <Typography variant='h4' component='h3' color='inherit' gutterBottom>
+      <Button
+        variant='contained'
+        size='large'
+        color='secondary'
+        gutterBottom
+        className={classes.button}
+      >
         {website}
-      </Typography>
+      </Button>
       <Paper>
         <List dense component='nav' aria-label='twitter posts'>
           <ListItem button>
