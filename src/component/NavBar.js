@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => {
       marginRight: '3px'
     },
     root: {
-      // marginBottom: '100px'
+      background: theme.palette.primary.dark
     }
   };
 });

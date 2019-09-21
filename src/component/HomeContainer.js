@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => {
       padding: '0 0 50px'
     },
     ctaContainer: {
-      padding: '125px 0 75px'
+      padding: '50px 0 50px'
     },
     divider: {
       background: theme.palette.secondary.light,

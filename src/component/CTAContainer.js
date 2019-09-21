@@ -19,7 +19,8 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.secondary.light
   },
   title: {
-    borderBottom: `3px solid ${theme.palette.primary.light}`
+    // borderBottom: `3px solid ${theme.palette.primary.light}`,
+    marginBottom: 15
   },
   liveStatus: {
     padding: 15
@@ -38,16 +39,13 @@ const CTAContainer = () => {
     <Grid
       container
       spacing={3}
-      className={classes.card}
+      // className={classes.card}
       justify='space-around'
       align='center'
       alignItems='center'
     >
-      <Grid item xs={4}>
+      <Grid item xs={10} md={6} sm={10}>
         <Paper className={classes.liveStatus}>
-          <Typography variant='h1' component='p' color='inherit'>
-            24:00
-          </Typography>
           <Typography
             variant='h2'
             component='h1'
@@ -56,56 +54,58 @@ const CTAContainer = () => {
           >
             DOLL<span className={classes.highlight}>NUT</span>
           </Typography>
-          <Typography variant='subtitle1' component='h2' color='textPrimary'>
-            Twitch Analysis on the Best Anime & Manga
-          </Typography>
 
-          <Typography
-            variant='subtitle1'
-            gutterBottom
-            component='h4'
-            color='textPrimary'
-          >
-            Everyday 6AM-10AM
-          </Typography>
-          <br />
-          <Button
-            color='secondary'
-            variant='contained'
-            size='large'
-            width='100%'
-            disabled
-            fullWidth
-          >
-            <PlayArrow />
-            Live Soon
-          </Button>
+          <Card>
+            <CardActionArea>
+              <CardMedia
+                component='img'
+                alt='DollNut YouTube Title'
+                height='252px'
+                width='448px'
+                title='YouTube Title'
+                image='https://images.pexels.com/photos/1191639/pexels-photo-1191639.jpeg?cs=srgb&dl=baked-goods-bread-bright-1191639.jpg&fm=jpg'
+              />
+            </CardActionArea>
+            <CardContent>
+              <Typography
+                gutterBottom
+                variant='h5'
+                component='h2'
+                color='textPrimary'
+              >
+                YouTube Title
+              </Typography>
+              <Button variant='contained' color='secondary' fullWidth>
+                Watch Now
+              </Button>
+              <Button color='secondary' fullWidth>
+                Share
+              </Button>
+            </CardContent>
+          </Card>
         </Paper>
       </Grid>
-      <Grid item xs={4}>
-        <Card>
-          <CardActionArea>
-            <CardMedia
-              component='img'
-              alt='DollNut YouTube Title'
-              height='252px'
-              width='448px'
-              title='YouTube Title'
-              image='https://images.pexels.com/photos/1191639/pexels-photo-1191639.jpeg?cs=srgb&dl=baked-goods-bread-bright-1191639.jpg&fm=jpg'
-            />
-          </CardActionArea>
-          <CardContent>
-            <Typography gutterBottom variant='h5' component='h2'>
-              YouTube Title
-            </Typography>
-            <Button variant='contained' color='secondary' fullWidth>
-              Watch Now
-            </Button>
-            <Button color='secondary' fullWidth>
-              Share
-            </Button>
-          </CardContent>
-        </Card>
+      <Grid item xs={8} sm={6} md={3}>
+        <div>
+          <Card>
+            <CardContent>
+              <Typography
+                component='p'
+                variant='h3'
+                color='textPrimary'
+                gutterBottom
+              >
+                24:00
+              </Typography>
+              <Typography color='textPrimary' variant='h4'>
+                Twitch Streams
+              </Typography>
+              <Typography variant='subtitle1' color='textPrimary'>
+                Mon-Fri 6AM-10PM
+              </Typography>
+            </CardContent>
+          </Card>
+        </div>
       </Grid>
     </Grid>
   );
