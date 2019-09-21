@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     borderBottom: `3px solid ${theme.palette.primary.light}`
+  },
+  liveStatus: {
+    color: theme.palette.primary.contrastText
   }
 }));
 
@@ -40,36 +43,43 @@ const CTAContainer = () => {
       alignItems='center'
     >
       <Grid item xs={4}>
-        <Typography variant='h1' component='h6' color='textPrimary'>
-          24:00
-        </Typography>
-        <Typography
-          variant='h2'
-          component='h1'
-          color='primary'
-          className={classes.title}
-        >
-          DOLL<span className={classes.highlight}>NUT</span>
-        </Typography>
-        <Typography variant='subtitle1' component='h2'>
-          Twitch Analysis on the Best Anime & Manga
-        </Typography>
+        <div>
+          <Typography variant='h1' component='p' color='inherit'>
+            24:00
+          </Typography>
+          <Typography
+            variant='h2'
+            component='h1'
+            color='primary'
+            className={classes.title}
+          >
+            DOLL<span className={classes.highlight}>NUT</span>
+          </Typography>
+          <Typography variant='subtitle1' component='h2' color='textPrimary'>
+            Twitch Analysis on the Best Anime & Manga
+          </Typography>
 
-        <Typography variant='subtitle1' gutterBottom component='h4'>
-          Everyday 6AM-10AM
-        </Typography>
-        <br />
-        <Button
-          color='secondary'
-          variant='contained'
-          size='large'
-          width='100%'
-          disabled
-          fullWidth
-        >
-          <PlayArrow />
-          Live Soon
-        </Button>
+          <Typography
+            variant='subtitle1'
+            gutterBottom
+            component='h4'
+            color='textPrimary'
+          >
+            Everyday 6AM-10AM
+          </Typography>
+          <br />
+          <Button
+            color='secondary'
+            variant='contained'
+            size='large'
+            width='100%'
+            disabled
+            fullWidth
+          >
+            <PlayArrow />
+            Live Soon
+          </Button>
+        </div>
       </Grid>
       <Grid item xs={4}>
         <Card>

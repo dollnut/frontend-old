@@ -29,10 +29,12 @@ import SocialCard from './component/SocialCard';
 import SocialCardList from './component/SocialCardList';
 import CTAContainer from './component/CTAContainer';
 import YouTubeContainer from './component/YouTubeContainer';
+import HomeContainer from './component/HomeContainer';
+import { grey } from '@material-ui/core/colors';
 const useStyles = makeStyles(theme => {
   return {
     bg: {
-      background: theme.palette.primary.dark,
+      background: theme.palette.primary.main,
       color: theme.palette.primary.contrastText,
       padding: '50px 0'
     },
@@ -57,11 +59,15 @@ const useStyles = makeStyles(theme => {
       border: 'none'
     },
     footer: {
-      background: theme.palette.primary.main,
-      padding: '75px 0 50px'
+      background: theme.palette.primary.dark,
+      color: theme.palette.primary.contrastText,
+      padding: '25px 0 25px'
     },
     title: {
       flewGrow: 1
+    },
+    root: {
+      background: grey[900]
     }
   };
 });
@@ -69,29 +75,9 @@ const useStyles = makeStyles(theme => {
 function App() {
   const classes = useStyles();
   return (
-    <>
-      <NavBar />
-      <Container className={classes.ctaContainer}>
-        <CTAContainer />
-      </Container>
-
-      <div className={classes.bg}>
-        <Container className={classes.gutterBottom}>
-          <SocialCardList />
-        </Container>
-        <Container className={classes.gutterBottom}>
-          <YouTubeContainer />
-        </Container>
-      </div>
-      <footer className={classes.footer}>
-        <Container>
-          <Typography variant='h4' className={classes.title}>
-            DollNut - 2019
-          </Typography>
-          <Icon className='fab fa-youtube' />
-        </Container>
-      </footer>
-    </>
+    <div className={classes.root}>
+      <HomeContainer />
+    </div>
   );
 }
 
