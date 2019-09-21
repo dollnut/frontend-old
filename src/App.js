@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => {
       flewGrow: 1
     },
     root: {
-      // background: grey[900]
+      background: grey[900]
     }
   };
 });

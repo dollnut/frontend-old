@@ -27,10 +27,11 @@ import SocialCard from './SocialCard';
 import SocialCardList from './SocialCardList';
 import CTAContainer from './CTAContainer';
 import YouTubeContainer from './YouTubeContainer';
+import { grey } from '@material-ui/core/colors';
 const useStyles = makeStyles(theme => {
   return {
     bg: {
-      background: theme.palette.primary.main,
+      background: theme.palette.primary.dark,
       color: theme.palette.primary.contrastText,
       padding: '50px 0'
     },
@@ -55,7 +56,7 @@ const useStyles = makeStyles(theme => {
       border: 'none'
     },
     footer: {
-      background: theme.palette.primary.dark,
+      background: grey[900],
       color: theme.palette.primary.contrastText,
       padding: '25px 0 25px'
     },
@@ -89,7 +90,7 @@ function HomeContainer() {
               <Typography
                 variant='h5'
                 className={classes.title}
-                color='textSecondary'
+                color='textPrimary'
               >
                 DollNut - 2019
               </Typography>

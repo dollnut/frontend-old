@@ -2,6 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, Button, makeStyles } from '@material-ui/core';
 import StreamIcon from '@material-ui/icons/Tv';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import { brown } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => {
   return {

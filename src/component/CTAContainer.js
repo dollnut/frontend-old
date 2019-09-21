@@ -8,7 +8,8 @@ import {
   CardMedia,
   makeStyles,
   CardContent,
-  Icon
+  Icon,
+  Paper
 } from '@material-ui/core';
 import PlayArrow from '@material-ui/icons/PlayArrow';
 import { loadCSS } from 'fg-loadcss';
@@ -21,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     borderBottom: `3px solid ${theme.palette.primary.light}`
   },
   liveStatus: {
-    color: theme.palette.primary.contrastText
+    padding: 15
   }
 }));
 
@@ -43,7 +44,7 @@ const CTAContainer = () => {
       alignItems='center'
     >
       <Grid item xs={4}>
-        <div>
+        <Paper className={classes.liveStatus}>
           <Typography variant='h1' component='p' color='inherit'>
             24:00
           </Typography>
@@ -79,7 +80,7 @@ const CTAContainer = () => {
             <PlayArrow />
             Live Soon
           </Button>
-        </div>
+        </Paper>
       </Grid>
       <Grid item xs={4}>
         <Card>
@@ -90,7 +91,7 @@ const CTAContainer = () => {
               height='252px'
               width='448px'
               title='YouTube Title'
-              image='https://pbs.twimg.com/profile_images/1165870474393337856/K9OpySa3_200x200.jpg'
+              image='https://images.pexels.com/photos/1191639/pexels-photo-1191639.jpeg?cs=srgb&dl=baked-goods-bread-bright-1191639.jpg&fm=jpg'
             />
           </CardActionArea>
           <CardContent>

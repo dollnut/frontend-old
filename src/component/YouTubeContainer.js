@@ -41,7 +41,7 @@ const YouTubeContainer = ({ className }) => {
                 component='img'
                 alt='DollNut YouTube Title'
                 title='YouTube Title'
-                image='https://pbs.twimg.com/profile_images/1165870474393337856/K9OpySa3_200x200.jpg'
+                image='https://images.pexels.com/photos/1927573/pexels-photo-1927573.jpeg?cs=srgb&dl=abstract-painting-art-artistic-1927573.jpg&fm=jpg'
                 // height='140px'
               />
             </CardActionArea>
@@ -57,7 +57,7 @@ const YouTubeContainer = ({ className }) => {
                 component='img'
                 alt='DollNut YouTube Title'
                 title='YouTube Title'
-                image='https://pbs.twimg.com/profile_images/1165870474393337856/K9OpySa3_200x200.jpg'
+                image='https://images.pexels.com/photos/1927573/pexels-photo-1927573.jpeg?cs=srgb&dl=abstract-painting-art-artistic-1927573.jpg&fm=jpg'
                 height='140px'
               />
             </CardActionArea>
@@ -73,7 +73,7 @@ const YouTubeContainer = ({ className }) => {
                 component='img'
                 alt='DollNut YouTube Title'
                 title='YouTube Title'
-                image='https://pbs.twimg.com/profile_images/1165870474393337856/K9OpySa3_200x200.jpg'
+                image='https://images.pexels.com/photos/1927573/pexels-photo-1927573.jpeg?cs=srgb&dl=abstract-painting-art-artistic-1927573.jpg&fm=jpg'
                 height='140px'
               />
             </CardActionArea>
@@ -89,7 +89,7 @@ const YouTubeContainer = ({ className }) => {
                 component='img'
                 alt='DollNut YouTube Title'
                 title='YouTube Title'
-                image='https://pbs.twimg.com/profile_images/1165870474393337856/K9OpySa3_200x200.jpg'
+                image='https://images.pexels.com/photos/1927573/pexels-photo-1927573.jpeg?cs=srgb&dl=abstract-painting-art-artistic-1927573.jpg&fm=jpg'
                 height='140px'
               />
             </CardActionArea>
@@ -106,7 +106,7 @@ const YouTubeContainer = ({ className }) => {
                 component='img'
                 alt='DollNut YouTube Title'
                 title='YouTube Title'
-                image='https://pbs.twimg.com/profile_images/1165870474393337856/K9OpySa3_200x200.jpg'
+                image='https://images.pexels.com/photos/1927573/pexels-photo-1927573.jpeg?cs=srgb&dl=abstract-painting-art-artistic-1927573.jpg&fm=jpg'
                 height='140px'
               />
             </CardActionArea>

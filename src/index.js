@@ -5,32 +5,17 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core';
-import {
-  brown,
-  cyan,
-  pink,
-  green,
-  grey,
-  orange,
-  red,
-  lightGreen,
-  lime,
-  amber,
-  blue,
-  indigo,
-  deepOrange,
-  yellow,
-  purple,
-  deepPurple,
-  lightBlue,
-  teal
-} from '@material-ui/core/colors';
+import { brown, green } from '@material-ui/core/colors';
 import { light } from '@material-ui/core/styles/createPalette';
 
 const theme = createMuiTheme({
   palette: {
-    primary: blue,
-    secondary: pink
+    primary: {
+      main: brown[700]
+    },
+    secondary: {
+      main: green[600]
+    }
   }
 });
 
