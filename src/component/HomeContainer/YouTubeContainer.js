@@ -19,7 +19,7 @@ import {
   GridListTile,
   GridListTileBar
 } from '@material-ui/core';
-import MediaTitleButton from './general/MediaTitleButton';
+import MediaTitleButton from '../general/MediaTitleButton';
 
 const useStyles = makeStyles(themes => ({}));
 

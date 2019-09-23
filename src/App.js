@@ -24,12 +24,12 @@ import {
   Icon
 } from '@material-ui/core';
 import PlayIcon from '@material-ui/icons/PlayArrow';
-import NavBar from './component/NavBar';
-import SocialCard from './component/SocialCard';
-import SocialCardList from './component/SocialCardList';
-import CTAContainer from './component/CTAContainer';
-import YouTubeContainer from './component/YouTubeContainer';
-import HomeContainer from './component/HomeContainer';
+import NavBar from './component/HomeContainer/NavBar';
+import SocialCard from './component/HomeContainer/SocialCard';
+import SocialCardList from './component/HomeContainer/SocialCardList';
+import CTAContainer from './component/HomeContainer/CTAContainer';
+import YouTubeContainer from './component/HomeContainer/YouTubeContainer';
+import HomeContainer from './component/HomeContainer/HomeContainer';
 import { grey } from '@material-ui/core/colors';
 const useStyles = makeStyles(theme => {
   return {

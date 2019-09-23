@@ -14,7 +14,8 @@ const theme = createMuiTheme({
       main: grey[900]
     },
     secondary: blue
-  }
+  },
+  spacing: 5
 });
 
 ReactDOM.render(
