@@ -16,44 +16,11 @@ import ExpandMore from '@material-ui/icons/ExpandMore';
 import { makeStyles } from '@material-ui/styles';
 import { loadCSS } from 'fg-loadcss';
 import { red, blue, purple, indigo, grey } from '@material-ui/core/colors';
-
-const sidebarObject = [
-  {
-    cssName: 'fab fa-youtube',
-    title: 'YouTube',
-    color: red[600]
-  },
-  {
-    cssName: 'fab fa-twitch',
-    title: 'Twitch',
-    color: purple[600]
-  },
-  {
-    cssName: 'fab fa-twitter',
-    title: 'Twitter',
-    color: blue[300]
-  },
-  {
-    cssName: 'fab fa-discord',
-    title: 'Discord',
-    color: indigo[300]
-  },
-  {
-    cssName: 'fab fa-instagram ',
-    title: 'Instagram',
-    color: purple[400],
-    divider: true
-  },
-  {
-    cssName: 'fas fa-user-circle',
-    title: 'Login',
-    color: grey[900]
-  }
-];
+import { socialLinks } from '../../data';
 
 const SideBar = ({ open, handleClose }) => {
   const [openLists, setOpenLists] = React.useState({ Social: true });
-  const [sidebarNavKeys, setSidebarNavKeys] = React.useState(sidebarObject);
+  const [sidebarNavKeys, setSidebarNavKeys] = React.useState(socialLinks);
   const classes = useStyles();
   const toggleListCollapse = name => {
     setOpenLists({ ...openLists, [name]: !openLists[name] });

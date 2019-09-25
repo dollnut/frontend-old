@@ -16,6 +16,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import Menu from '@material-ui/icons/Menu';
 import { brown } from '@material-ui/core/colors';
 import SideBar from './SideBar';
+import { socialLinks } from '../../data';
 
 const useStyles = makeStyles(theme => {
   return {
@@ -37,12 +38,7 @@ const useStyles = makeStyles(theme => {
 const NavBar = () => {
   const classes = useStyles();
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
-  const [navbarItems, setNavbarItems] = React.useState([
-    { title: 'YouTube' },
-    { title: 'Discord' },
-    { title: 'Instagram' },
-    { title: 'Twitter' }
-  ]);
+  const [navbarItems, setNavbarItems] = React.useState(socialLinks);
   const handleClose = () => {
     setSidebarOpen(false);
   };

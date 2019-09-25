@@ -1,29 +1,13 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import {
-  Toolbar,
   Typography,
   makeStyles,
   Button,
-  Paper,
   Container,
-  List,
-  ListItem,
-  ListItemText,
-  Grid,
-  Card,
-  CardActionArea,
-  CardMedia,
-  CardContent,
-  Avatar,
-  GridList,
-  GridListTile,
-  GridListTileBar,
-  Icon
+  Grid
 } from '@material-ui/core';
-import PlayIcon from '@material-ui/icons/PlayArrow';
-import NavBar from './NavBar';
-import SocialCard from './SocialCard';
+import NavBar from '../navigation/NavBar';
 import SocialCardList from './SocialCardList';
 import CTAContainer from './CTAContainer';
 import YouTubeContainer from './YouTubeContainer';
@@ -70,7 +54,6 @@ function HomeContainer() {
   const classes = useStyles();
   return (
     <>
-      <NavBar />
       <Container className={classes.ctaContainer}>
         <CTAContainer />
       </Container>
