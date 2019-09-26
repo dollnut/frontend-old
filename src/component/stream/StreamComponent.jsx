@@ -27,7 +27,7 @@ const StreamComponent = ({ classes }) => {
             />
           </div>
         </Grid>
-        <Grid item md={3} xs={8}>
+        <Grid item md={3} xs={10}>
           <StreamChatBox />
         </Grid>
       </Grid>

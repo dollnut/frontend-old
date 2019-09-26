@@ -12,7 +12,7 @@ const StreamStyles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     height: '100%',
-    minHeight: 500
+    minHeight: 300
   },
   chip: {
     marginRight: theme.spacing(1),
