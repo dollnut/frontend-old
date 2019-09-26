@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import StreamChatNavBar from './streamChatNavBar';
 import { withStyles } from '@material-ui/styles';
 import StreamStyles from '../StreamStyles';
@@ -10,12 +10,8 @@ const StreamChatBox = ({ height, classes }) => {
   const handleChange = (e, newValue) => {
     setValue(newValue);
   };
-  const ref = useRef(null);
-  useEffect(() => {
-    // ref.current.nanoScroller({ scroll: 'bottom' });
-  }, []);
   return (
-    <Paper className={`${classes.chatRoot} `} ref={ref}>
+    <Paper className={`${classes.chatRoot} `}>
       <StreamChatNavBar value={value} handleChange={handleChange} />
       <StreamChatMessageList />
       <Input

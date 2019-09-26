@@ -4,6 +4,7 @@ import StreamStyles from '../StreamStyles';
 import StreamChatMessage from './streamChatMessage';
 import { List } from '@material-ui/core';
 import $ from 'jquery';
+import nanoScroller from 'nanoscroller';
 
 const StreamChatMessageList = ({ classes }) => {
   useEffect(() => {
@@ -30,7 +31,6 @@ const StreamChatMessageList = ({ classes }) => {
           11,
           1,
           1,
-          ,
           1,
           1,
           1,
