@@ -13,7 +13,7 @@ const StreamChatMessageList = ({ classes }) => {
   });
 
   return (
-    <div className='nano' style={{ height: '100%' }}>
+    <div className='nano'>
       <List dense className={`${classes.chatMessageList} nano-content`}>
         {[
           1,

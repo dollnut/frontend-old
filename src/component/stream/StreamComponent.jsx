@@ -1,14 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Grid, Paper, Typography, withStyles } from '@material-ui/core';
-import SettingsIcon from '@material-ui/icons/Settings';
-import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
-import NotesIcon from '@material-ui/icons/Notes';
-import LoyaltyIcon from '@material-ui/icons/Loyalty';
-import HelpIcon from '@material-ui/icons/Help';
-import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
+import ResponsiveEmbed from 'react-responsive-embed';
 
 import StreamStyles from './StreamStyles';
-import StreamChatNavBar from './chatbox/streamChatNavBar';
 import StreamChatBox from './chatbox/streamChatBox';
 
 const StreamComponent = ({ classes }) => {
@@ -23,21 +17,18 @@ const StreamComponent = ({ classes }) => {
 
   return (
     <div className={classes.root}>
-      <Grid container justify='space-around' style={{ height: '100vh' }}>
-        <Grid
-          item
-          md={8}
-          ref={ref}
-          style={{ maxHeight: height, height: '100%' }}
-        >
-          <iframe
-            src='https://player.twitch.tv/?channel=dollnut'
-            height={'100%'}
-            width='100%'
-          ></iframe>
+      <Grid container justify='space-around'>
+        <Grid item md={8} xs={10} ref={ref}>
+          <div>
+            <ResponsiveEmbed
+              src='https://player.twitch.tv/?channel=dollnut'
+              allowFullScreen
+              ratio='16:9'
+            />
+          </div>
         </Grid>
-        <Grid item md={3}>
-          <StreamChatBox height={height} />
+        <Grid item md={3} xs={8}>
+          <StreamChatBox />
         </Grid>
       </Grid>
     </div>

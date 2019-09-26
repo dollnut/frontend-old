@@ -10,7 +10,8 @@ import './nanoscroller.css';
 const useStyles = makeStyles(theme => {
   return {
     root: {
-      background: grey[900]
+      background: grey[900],
+      height: '100%'
     }
   };
 });

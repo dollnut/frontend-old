@@ -17,10 +17,11 @@ const StreamChatBox = ({ height, classes }) => {
     // ref.current.nanoScroller({ scroll: 'bottom' });
   }, []);
   return (
-    <Paper style={{ height }} className={`${classes.chatRoot} `} ref={ref}>
+    <Paper className={`${classes.chatRoot} `} ref={ref}>
       <StreamChatNavBar value={value} handleChange={handleChange} />
       <StreamChatMessageList />
       <Input
+        variant='outline'
         multiline
         placeholder='Chat something nice!'
         className={classes.chatTextField}
