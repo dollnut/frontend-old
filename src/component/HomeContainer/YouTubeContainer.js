@@ -1,25 +1,13 @@
 import React from 'react';
 import {
-  Toolbar,
   Typography,
   makeStyles,
-  Button,
-  Paper,
-  Container,
-  List,
-  ListItem,
-  ListItemText,
   Grid,
   Card,
   CardActionArea,
   CardMedia,
-  CardContent,
-  Avatar,
-  GridList,
-  GridListTile,
-  GridListTileBar
+  CardContent
 } from '@material-ui/core';
-import MediaTitleButton from '../general/MediaTitleButton';
 
 const useStyles = makeStyles(themes => ({}));
 

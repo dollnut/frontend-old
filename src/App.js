@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { makeStyles, Icon } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import HomeContainer from './component/HomeContainer/HomeContainer';
 import NavBar from './component/navigation/NavBar.js';
 import { Route, Switch } from 'react-router-dom';

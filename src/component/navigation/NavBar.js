@@ -6,16 +6,11 @@ import {
   Button,
   makeStyles,
   IconButton,
-  Hidden,
-  List,
-  ListItem,
-  Drawer,
-  ListItemText
+  Hidden
 } from '@material-ui/core';
 import StreamIcon from '@material-ui/icons/Tv';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import Menu from '@material-ui/icons/Menu';
-import { brown } from '@material-ui/core/colors';
 import SideBar from './SideBar';
 import { socialLinks } from '../../data';
 

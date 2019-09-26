@@ -1,5 +1,4 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
 import {
   Typography,
   makeStyles,
@@ -7,7 +6,6 @@ import {
   Container,
   Grid
 } from '@material-ui/core';
-import NavBar from '../navigation/NavBar';
 import SocialCardList from './SocialCardList';
 import CTAContainer from './CTAContainer';
 import YouTubeContainer from './YouTubeContainer';

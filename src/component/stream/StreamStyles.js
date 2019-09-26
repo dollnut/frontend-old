@@ -3,9 +3,6 @@ const StreamStyles = theme => ({
   chatNav: {
     background: theme.palette.secondary.light
   },
-  ['.BottomNavigationAction.selected']: {
-    color: '#fff'
-  },
   chatRoot: {
     background: theme.palette.primary.dark,
     color: theme.palette.primary.contrastText,

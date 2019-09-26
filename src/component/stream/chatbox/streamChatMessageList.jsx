@@ -3,7 +3,6 @@ import { withStyles } from '@material-ui/styles';
 import StreamStyles from '../StreamStyles';
 import StreamChatMessage from './streamChatMessage';
 import { List } from '@material-ui/core';
-import nanoScroller from 'nanoscroller';
 import $ from 'jquery';
 
 const StreamChatMessageList = ({ classes }) => {

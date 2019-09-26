@@ -8,10 +8,8 @@ import {
   CardMedia,
   makeStyles,
   CardContent,
-  Icon,
   Paper
 } from '@material-ui/core';
-import PlayArrow from '@material-ui/icons/PlayArrow';
 import { loadCSS } from 'fg-loadcss';
 
 const useStyles = makeStyles(theme => ({

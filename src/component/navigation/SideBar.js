@@ -5,26 +5,16 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
-  Collapse,
   ListSubheader,
-  Icon,
   Divider
 } from '@material-ui/core';
-import PersonIcon from '@material-ui/icons/Person';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
 import { makeStyles } from '@material-ui/styles';
 import { loadCSS } from 'fg-loadcss';
-import { red, blue, purple, indigo, grey } from '@material-ui/core/colors';
 import { socialLinks } from '../../data';
 import { Link } from 'react-router-dom';
 const SideBar = ({ open, handleClose }) => {
-  const [openLists, setOpenLists] = React.useState({ Social: true });
   const [sidebarNavKeys, setSidebarNavKeys] = React.useState(socialLinks);
   const classes = useStyles();
-  const toggleListCollapse = name => {
-    setOpenLists({ ...openLists, [name]: !openLists[name] });
-  };
   React.useEffect(() => {
     loadCSS(
       'https://use.fontawesome.com/releases/v5.1.0/css/all.css',

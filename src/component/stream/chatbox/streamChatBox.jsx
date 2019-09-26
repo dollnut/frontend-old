@@ -3,9 +3,7 @@ import StreamChatNavBar from './streamChatNavBar';
 import { withStyles } from '@material-ui/styles';
 import StreamStyles from '../StreamStyles';
 import StreamChatMessageList from './streamChatMessageList';
-import { Paper, TextField, Input } from '@material-ui/core';
-import nanoScroller from 'nanoscroller';
-import $ from 'jquery';
+import { Paper, Input } from '@material-ui/core';
 
 const StreamChatBox = ({ height, classes }) => {
   const [value, setValue] = useState('chat');
