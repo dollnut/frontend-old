@@ -6,15 +6,16 @@ import NavBar from './component/navigation/NavBar.js';
 import { Route, Switch } from 'react-router-dom';
 import { grey } from '@material-ui/core/colors';
 import StreamComponent from './component/stream/StreamComponent';
+import './nanoscroller.css';
 const useStyles = makeStyles(theme => {
   return {
     root: {
-      background: grey[900],
+      background: grey[900]
     }
   };
 });
 
-function App() {
+function App({ location }) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
