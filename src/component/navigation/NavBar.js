@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
@@ -54,11 +55,15 @@ const NavBar = () => {
               <Menu />
             </IconButton>
             <Hidden smDown>
-              {navbarItems.map(({ title }) => (
-                <Button color='inherit' component='li'>
-                  {title}
-                </Button>
-              ))}
+              {navbarItems.map(({ title, hideOnNav }) => {
+                return (
+                  !hideOnNav && (
+                    <Button color='inherit' component='li'>
+                      {title}
+                    </Button>
+                  )
+                );
+              })}
             </Hidden>
 
             <Button
@@ -70,12 +75,19 @@ const NavBar = () => {
               Support the Stream
             </Button>
           </ul>
-          <Button className={classes.navItem} color='inherit'>
+          <Button
+            className={classes.navItem}
+            color='inherit'
+            component={Link}
+            to='/live'
+          >
             <StreamIcon className={classes.icon} />
             Stream
           </Button>
           <Hidden xsDown>
-            <Button color='inherit'>Login</Button>
+            <Button color='inherit' component={Link}>
+              Login
+            </Button>
           </Hidden>
         </Toolbar>
       </AppBar>

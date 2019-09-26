@@ -8,3 +8,7 @@ html,
 * {
   box-sizing: border-box;
 }
+
+.BottomNavigationAction.selected {
+  color:#fff
+}

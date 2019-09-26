@@ -17,7 +17,7 @@ import { makeStyles } from '@material-ui/styles';
 import { loadCSS } from 'fg-loadcss';
 import { red, blue, purple, indigo, grey } from '@material-ui/core/colors';
 import { socialLinks } from '../../data';
-
+import { Link } from 'react-router-dom';
 const SideBar = ({ open, handleClose }) => {
   const [openLists, setOpenLists] = React.useState({ Social: true });
   const [sidebarNavKeys, setSidebarNavKeys] = React.useState(socialLinks);
@@ -43,42 +43,25 @@ const SideBar = ({ open, handleClose }) => {
             </ListSubheader>
           }
         >
-          {sidebarNavKeys.map(({ cssName, title, divider, color }) => (
-            <>
-              <ListItem button className={classes.nested}>
-                <ListItemIcon>
-                  <i className={`${cssName} fa-2x`} style={{ color }} />
-                </ListItemIcon>
-                <ListItemText primary={title} />
-              </ListItem>
-              {divider && <Divider />}
-            </>
-          ))}
-          {/* {Object.keys(sidebarNavKeys).map(key => {
-            return (
+          {sidebarNavKeys.map(
+            ({ cssName, title, divider, color, internalLink }) => (
               <>
-                <ListItem button onClick={() => toggleListCollapse(key)}>
+                <ListItem
+                  button
+                  className={classes.nested}
+                  component={internalLink ? Link : 'li'}
+                  to={internalLink}
+                  onClick={handleClose}
+                >
                   <ListItemIcon>
-                    <i className={sidebarNavKeys[key][0].cssName } />
+                    <i className={`${cssName} fa-2x`} style={{ color }} />
                   </ListItemIcon>
-                  <ListItemText primary={key} />
-                  {openLists[key] ? <ExpandLess /> : <ExpandMore />}
+                  <ListItemText primary={title} />
                 </ListItem>
-                <Collapse in={openLists[key]} unmountOnExit timeout='auto'>
-                  <List component='div' disablePadding>
-                    {sidebarNavKeys[key].map(({ cssName, title }) => (
-                      <ListItem button className={classes.nested}>
-                        <ListItemIcon>
-                          <i className={cssName} />
-                        </ListItemIcon>
-                        <ListItemText primary={title} />
-                      </ListItem>
-                    ))}
-                  </List>
-                </Collapse>
+                {divider && <Divider />}
               </>
-            );
-          })} */}
+            )
+          )}
         </List>
       </div>
     </Drawer>

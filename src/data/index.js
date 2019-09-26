@@ -2,6 +2,14 @@ import { red, purple, blue, indigo, grey } from '@material-ui/core/colors';
 
 export const socialLinks = [
   {
+    cssName: 'fas fa-home',
+    title: 'DollNut',
+    color: blue[600],
+    divider: true,
+    hideOnNav: true,
+    internalLink: '/'
+  },
+  {
     cssName: 'fab fa-youtube',
     title: 'YouTube',
     color: red[600]
@@ -30,6 +38,8 @@ export const socialLinks = [
   {
     cssName: 'fas fa-user-circle',
     title: 'Login',
-    color: grey[900]
+    color: grey[900],
+    hideOnNav: true,
+    internalLink: '/login'
   }
 ];
