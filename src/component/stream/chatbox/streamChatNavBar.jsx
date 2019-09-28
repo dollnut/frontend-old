@@ -21,11 +21,11 @@ const StreamChatNavBar = ({ value, handleChange, classes }) => {
         label='Chat'
         icon={<ChatBubbleIcon />}
       />
-      <BottomNavigationAction
+      {/* <BottomNavigationAction
         value='emotes'
         label='Emotes'
         icon={<EmojiEmotionsIcon />}
-      />
+      /> */}
       <BottomNavigationAction
         value='donate'
         label='Donate'
@@ -36,7 +36,7 @@ const StreamChatNavBar = ({ value, handleChange, classes }) => {
         label='Settings'
         icon={<SettingsIcon />}
       />
-      <BottomNavigationAction value='help' label='Help' icon={<HelpIcon />} />
+      {/* <BottomNavigationAction value='help' label='Help' icon={<HelpIcon />} /> */}
     </BottomNavigation>
   );
 };
