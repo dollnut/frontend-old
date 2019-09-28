@@ -7,6 +7,8 @@ import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core';
 import { blue, grey } from '@material-ui/core/colors';
 import { BrowserRouter } from 'react-router-dom';
+import { Auth0Provider } from './react-auth0-wrapper';
+import config from './auth_config.json'
 
 const theme = createMuiTheme({
   palette: {
@@ -18,11 +20,27 @@ const theme = createMuiTheme({
   spacing: 5
 });
 
+const onRedirectCallback = appState => {
+  window.history.replaceState(
+    {},
+    document.title,
+    appState && appState.targetUrl
+      ? appState.targetUrl
+      : window.location.pathname
+  );
+};
+
 ReactDOM.render(
   <BrowserRouter>
-    <ThemeProvider theme={theme}>
+  <Auth0Provider domain={config.domain}
+    client_id={config.clientId}
+    redirect_uri={window.location.origin}
+    onRedirectCallback={onRedirectCallback}>
+     <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>
+  </Auth0Provider>
+   
   </BrowserRouter>,
   document.getElementById('root')
 );

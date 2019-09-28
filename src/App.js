@@ -7,6 +7,7 @@ import { Route, Switch } from 'react-router-dom';
 import { grey } from '@material-ui/core/colors';
 import StreamComponent from './component/stream/StreamComponent';
 import './nanoscroller.css';
+import ProfilePage from './component/profile/profile';
 const useStyles = makeStyles(theme => {
   return {
     root: {
@@ -24,6 +25,7 @@ function App({ location }) {
       <Switch>
         <Route exact path='/' component={HomeContainer} />
         <Route exact path='/live' component={StreamComponent} />
+        <Route exact path='/me' component={ProfilePage} />
       </Switch>
     </div>
   );

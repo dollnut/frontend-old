@@ -1,4 +1,5 @@
 import React from 'react';
+import { useAuth0 } from "../../react-auth0-wrapper";
 import { Link } from 'react-router-dom';
 import {
   AppBar,
@@ -35,12 +36,20 @@ const NavBar = () => {
   const classes = useStyles();
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
   const [navbarItems, setNavbarItems] = React.useState(socialLinks);
+  const { isAuthenticated, loginWithPopup, loginWithRedirect, logout } = useAuth0();
   const handleClose = () => {
     setSidebarOpen(false);
   };
   const handleOpen = () => {
     setSidebarOpen(true);
   };
+  const handleLogin = () => {
+    if(isAuthenticated) {
+       logout({})
+    }else {
+     loginWithPopup({})
+    }
+  }
   return (
     <>
       <AppBar position='static' className={classes.root}>
@@ -80,9 +89,11 @@ const NavBar = () => {
             Stream
           </Button>
           <Hidden xsDown>
-            <Button color='inherit' component={Link}>
+            {isAuthenticated ?  <Button color='inherit' component={Link} to='/me'>
+              Account
+            </Button>: <Button color='inherit' onClick={handleLogin}>
               Login
-            </Button>
+            </Button> }
           </Hidden>
         </Toolbar>
       </AppBar>
